@@ -27,3 +27,36 @@ Hoisting is JavaScript's default behavior of moving declarations to the top.
 In JavaScript, a variable can be declared after it has been used.
 JavaScript only hoists declarations, not initializations.
 
+#### this in JavaScript and how it differs from what we know from Java/.net.
+In JavaScript this always refers to the “owner” of the function we're executing, or to the object that a function is a method of.
+In Java, this refers to the current instance object on which the method is executed.
+
+#### Function Closures and the JavaScript Module Pattern
+A closure is a special kind of object that combines two things:
+A function
+The environment in which that function was created. The environment consists of any local variables that were in-scope at the time that the closure was created
+Global variables can be made local (private) with closures. A closure is a function having access to the parent scope, even after the parent function has closed.
+
+#### Immediately-Invoked Function Expressions (IIFE)
+IIFE executes immediately after it’s created.
+The first pair of parentheses (function(){...}) turns the code within (in this case, a function) into an expression, and the second pair of parentheses (function(){...})() calls the function that results from that evaluated expression.
+This pattern is often used when trying to avoid polluting the global namespace, because all the variables used inside the IIFE (like in any other normal function) are not visible outside its scope.
+
+#### JavaScripts Prototype
+Every JavaScript object has a prototype. The prototype is also an object.
+Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype.
+All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.
+With a constructor function, you can use the new keyword to create new objects from the same prototype:
+var newPerson = new Person("John", "Doe", 16);
+The constructor function is the prototype for Person objects.
+
+#### User defined Callback Functions
+In JavaScript, functions are first-class objects; that is, functions are of the type Object and they can be used in a first-class manner like any other object (String, Array, Number, etc.) since they are in fact objects themselves. Because functions are first-class objects, we can pass a function as an argument in another function and later execute that passed-in function or even return it to be executed later. This is the essence of using callback functions in JavaScript. 
+
+#### Provide examples and explain the es2005 features: let, arrow functions, this, rest parameters, de-structuring assignments, maps/sets etc.
+
+#### Explain and demonstrate how es2015 supports modules (import and export) similar to what is offered by NodeJS.
+
+#### Provide an example of ES6 inheritance and reflect over the differences between Inheritance in Java and in ES6.
+
+#### Provide examples with es6, running in a browser, using Babel and Webpack
