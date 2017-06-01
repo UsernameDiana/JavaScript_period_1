@@ -26,9 +26,14 @@ Node's Package Manager (npm) - online repository (the worlds largest ;-) for pub
 #### Explain about the Event Loop in Node.js
 An event loop, is a loop that waits for and dispatches events in a program.
 The operating system owns the event queue. The event loop pumps events from the event queue into the program for processing. So the event loop is the link between your program and the operating system.
+![alt_tag](https://www.tutorialspoint.com/nodejs/images/event_loop.jpg)
 
 #### Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
-
+Module bundling is simply the process of stitching together a group of modules (and their dependencies) into a single file(or group of files) in the correct order.  
+When you divide your program into modules, you typically organize those modules into different files and folders. Having separate < script > tags for each file means that the browser has to load each file individually, to get around this problem, we bundle all files into one big file (or a couple files) in order to reduce the number of requests.  
+* WebPack - open-source JavaScript module bundler. Packs many modules into a few bundled assets. Code Splitting allows to load parts for the application on demand.
+![alt_tag](http://js-plaul.rhcloud.com/webpack/images/what-is-webpack.png)
+* Babel - helps you write code in the latest version of JavaScript. When your supported environments don't support certain features natively, Babel will help you compile those features down to a supported version.
 
 #### Explain the purpose of “use strict” and also Linters, exemplified with ESLint.
 It is a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
